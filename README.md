@@ -1,156 +1,283 @@
 # Web Scraper Automation
 
-## Project Overview
+A **production-ready Python automation script** that scrapes job listings from a website and exports structured data into a CSV file.
 
-This project is a Python automation script that scrapes job listings from a website and exports the data into a CSV file.
+This project demonstrates **professional automation practices** such as configuration management, environment variables, logging, retry handling, and modular project structure. It is designed to be **freelancer-deliverable and client-friendly**.
 
-The script is designed with a professional structure suitable for freelance delivery.
-It includes configuration files, environment variables, logging, pagination scraping, and command-line arguments.
+---
 
-## Features
+# Project Demo
 
-* Website data scraping
-* Export data to CSV
-* Pagination scraping (scrape multiple pages)
-* Config file support
-* Environment variables
-* Logging system
-* Retry mechanism for failed requests
-* Command line arguments
+GitHub Repository
 
-## Technologies Used
+```
+https://github.com/poojashriram-1/web_scraper_automation
+```
 
-* Python
-* Requests
-* BeautifulSoup
-* python-dotenv
-* PyYAML
+Example Output File
 
-## Project Structure
-
-web_scraper_automation/
-
-main.py
-
-config.yaml
-
-.env
-
-requirements.txt
-
-README.md
-
-logs/
-
-data/
-
-utils/
-
-tests/
-
-## Installation
-
-1. Clone or download the project.
-
-2. Create a virtual environment.
-
-python -m venv venv
-
-3. Activate the environment.
-
-Windows:
-
-venv\Scripts\activate
-
-4. Install dependencies.
-
-pip install -r requirements.txt
-
-## Configuration
-
-Edit the `config.yaml` file to configure the scraper.
-
-Example configuration:
-
-url: https://realpython.github.io/fake-jobs/
-
-output_file: data/jobs.csv
-
-pages: 3
-
-## Environment Variables
-
-Create a `.env` file.
-
-Example:
-
-USER_AGENT=Mozilla/5.0
-
-This helps prevent blocking by websites.
-
-## Running the Script
-
-Run the scraper using:
-
-python main.py
-
-## Using Command Line Arguments
-
-You can override the number of pages from the command line.
-
-Example:
-
-python main.py --pages 5
-
-This will scrape 5 pages instead of the value in the config file.
-
-## Output
-
-The script will generate a CSV file in the data folder.
-
-Example output file:
-
+```
 data/jobs.csv
+```
 
-Example content:
+Example CSV Data
 
+```
 title,company,location
 Python Developer,ABC Corp,New York
 Backend Engineer,XYZ Ltd,Remote
+```
 
-## Logs
+---
 
-All script activity is recorded in the log file.
+# Features
 
+• Automated website scraping
+• Export scraped data to CSV
+• Pagination support (scrape multiple pages)
+• YAML configuration file
+• Environment variable support
+• Logging system
+• Retry mechanism for failed requests
+• Command-line arguments
+• Modular folder structure
+• Ready for freelance or production use
+
+---
+
+# Technologies Used
+
+```
+Python
+Requests
+BeautifulSoup
+python-dotenv
+PyYAML
+Logging
+```
+
+---
+
+# Project Structure
+
+```
+web_scraper_automation
+│
+├── main.py
+├── config.yaml
+├── .env
+├── requirements.txt
+├── README.md
+│
+├── data
+│   └── jobs.csv
+│
+├── logs
+│   └── app.log
+│
+├── utils
+│   ├── scraper.py
+│   ├── exporter.py
+│   └── logger.py
+│
+└── tests
+    └── test_script.py
+```
+
+---
+
+# Installation
+
+Clone the repository
+
+```
+git clone https://github.com/poojashriram-1/web_scraper_automation.git
+```
+
+Navigate to the project folder
+
+```
+cd web_scraper_automation
+```
+
+Create a virtual environment
+
+```
+python -m venv venv
+```
+
+Activate the virtual environment (Windows)
+
+```
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+# Configuration
+
+Edit the `config.yaml` file.
+
+Example configuration
+
+```
+url: https://realpython.github.io/fake-jobs/
+output_file: data/jobs.csv
+pages: 3
+```
+
+| Parameter   | Description               |
+| ----------- | ------------------------- |
+| url         | Website to scrape         |
+| output_file | CSV output location       |
+| pages       | Number of pages to scrape |
+
+---
+
+# Environment Variables
+
+Create a `.env` file.
+
+Example
+
+```
+USER_AGENT=Mozilla/5.0
+```
+
+This helps prevent websites from blocking automated requests.
+
+---
+
+# Running the Script
+
+Run the scraper
+
+```
+python main.py
+```
+
+The script will:
+
+1. Load configuration
+2. Send request to website
+3. Extract job data
+4. Save results to CSV
+5. Write logs
+
+---
+
+# Command Line Arguments
+
+Override pages from command line
+
+```
+python main.py --pages 5
+```
+
+---
+
+# Output
+
+Generated CSV file
+
+
+Screnshots
+
+
+![Output Screenshot](csv_screenshot.PNG)
+
+![Output Screenshot](logs.PNG)
+
+
+```
+data/jobs.csv
+```
+
+Example data
+
+```
+title,company,location
+Python Developer,ABC Corp,New York
+Backend Engineer,XYZ Ltd,Remote
+```
+
+---
+
+# Logging
+
+Log file location
+
+```
 logs/app.log
+```
 
-Example log entries:
+Example log output
 
+```
 Script started
 Request sent to website
-50 jobs scraped
-CSV file created
+Page 1 scraped
+50 jobs collected
+CSV file generated
+```
 
-## Error Handling
+---
 
-The script includes a retry mechanism.
-If a request fails, it will retry up to three times before logging an error.
+# Error Handling
 
-## Testing
+If a request fails, the scraper retries automatically.
 
-Basic test scripts are located in the tests folder.
+```
+Retry 1
+Retry 2
+Retry 3
+```
 
+Errors are recorded in the log file.
+
+---
+
+# Testing
+
+Basic tests are available in
+
+```
 tests/test_script.py
+```
 
-## Use Cases
+---
 
-* Job market analysis
-* Competitor monitoring
-* Lead generation
-* Data collection for analytics
+# Use Cases
 
-## Author
+• Job market analysis
+• Competitor monitoring
+• Lead generation
+• Data collection for analytics
+• Automated reporting
 
-Python Automation Project for freelance automation tasks.
+---
 
-This project demonstrates how to build a production-ready web scraping script.
+# Freelancer Value
+
+This project demonstrates:
+
+• Clean automation architecture
+• Configuration driven scripts
+• Logging and monitoring
+• Error handling and retries
+• Production ready structure
+
+These qualities make it **client-ready automation software**.
+
+---
+
+# Author
+
+Python Automation Project
+Created for **freelance automation portfolio**

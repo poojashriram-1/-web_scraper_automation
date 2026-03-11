@@ -16,3 +16,14 @@
 2026-03-09 14:02:11,386 - INFO - 100 jobs scraped
 2026-03-09 14:02:11,390 - INFO - Saving data to CSV
 2026-03-09 14:02:11,394 - INFO - CSV file created
+2026-03-11 15:31:16,616 - INFO - Scraping page 1
+2026-03-11 15:31:16,616 - INFO - Sending request to website
+2026-03-11 15:31:18,720 - INFO - 100 jobs scraped
+2026-03-11 15:31:18,725 - INFO - Scraping page 2
+2026-03-11 15:31:18,725 - INFO - Sending request to website
+2026-03-11 15:31:20,576 - INFO - 100 jobs scraped
+2026-03-11 15:31:20,580 - INFO - Scraping page 3
+2026-03-11 15:31:20,580 - INFO - Sending request to website
+2026-03-11 15:31:22,004 - INFO - 100 jobs scraped
+2026-03-11 15:31:22,007 - INFO - Saving data to CSV
+2026-03-11 15:31:22,011 - INFO - CSV file created
