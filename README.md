@@ -11,7 +11,7 @@ This project demonstrates **professional automation practices** such as configur
 GitHub Repository
 
 ```
-https://github.com/poojashriram-1/web_scraper_automation
+https://github.com/poojashriram-1/-web_scraper_automation
 ```
 
 Example Output File
@@ -91,7 +91,7 @@ web_scraper_automation
 Clone the repository
 
 ```
-git clone https://github.com/poojashriram-1/web_scraper_automation.git
+git clone https://github.com/poojashriram-1/-web_scraper_automation.git
 ```
 
 Navigate to the project folder
